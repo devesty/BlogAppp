@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Citizen Reporting App</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+
+<body>
+    <div class="login-form" id="loginPage">
+        <div class="text">
+            LOGIN HERE
+        </div>
+        <form>
+            <div class="field">
+                <div class="fas fa-envelope"></div>
+                <input type="text" placeholder="Username" id="username" required>
+            </div>
+            <div class="field">
+                <div class="fas fa-lock"></div>
+                <input type="password" placeholder="Password" id="password" required>
+            </div>
+            <button type="button" onclick="userLogin()">LOGIN</button>
+            <div class="link">
+                Not a member?
+                <a href="#">Signup now</a>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="container" id="postsPage" style="display: none;">
+        <h2>Posts</h2>
+    
+        <div id="incidentList" style="display: none;"></div>
+
+    </div>
+
+    <div class="report-container" id="reportContainer" style="display: none;">
+        <h2><strong>Create Post</strong></h2>
+        <form id="incidentForm">
+            <form id="incidentForm">
+                <label for="incidentType">Incident Type:</label>
+                <select id="incidentType" name="incidentType">
+                    <option value="fighting">Fighting</option>
+                    <option value="accident">Accident</option>
+                    <option value="rioting">Rioting</option>
+                </select>
+               
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <button type="button" onclick="submitIncident()">Submit</button>
+            </form>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
